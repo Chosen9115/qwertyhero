@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "QwertyHero",
+  "version": "0.1.0",
+  "description": "Keyboard-native browsing. Semantic app actions, DOM targeting, spatial fallback.",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "run_at": "document_idle",
+      "all_frames": false,
+      "js": [
+        "src/core/keyboard.js",
+        "src/core/modes.js",
+        "src/core/targeting.js",
+        "src/ui/root.js",
+        "src/core/hints.js",
+        "src/core/spatial.js",
+        "src/core/find.js",
+        "src/ui/bar.js",
+        "src/ui/help.js",
+        "src/sites/index.js",
+        "src/core/commands.js",
+        "src/content.js"
+      ]
+    }
+  ]
+}
