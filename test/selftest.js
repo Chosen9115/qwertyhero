@@ -2,9 +2,7 @@
 const assert = require('assert');
 global.window = global;
 
-const keys = require('../src/core/keyboard.js');
-const hints = require('../src/core/hints.js');
-const spatial = require('../src/core/spatial.js');
+const { keys, hints, spatial } = require('../src/qwertyhero.js');
 
 // --- key naming: shift is implicit for printable chars, explicit for named keys
 assert.equal(keys.name({ key: 'f' }), 'f');

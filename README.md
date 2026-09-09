@@ -128,8 +128,13 @@ label generation, spatial subdivision math.
 ## Layout
 
 ```
-src/core/   keyboard  modes  targeting  hints  spatial  find  commands
-src/sites/  index.js
-src/ui/     root  bar  help
-src/content.js
+manifest.json       MV3, no permissions, no host_permissions
+src/qwertyhero.js   the whole extension
+test/selftest.js    node test/selftest.js
 ```
+
+One file on purpose. Content scripts share a single global scope, so a `src/` tree of
+twelve modules bought directory tidiness and nothing else — each file paid a header line
+to re-declare the same `QH` global that was already shared. Sections are banner-commented
+in load order: keys, mode, targeting, ui root, hints, spatial, find, bar, help, sites,
+commands, dispatcher.
